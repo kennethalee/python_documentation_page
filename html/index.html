@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1><a href="#">Python Documentation</a></h1>
+      </header>
+      <ul>
+        <li>
+          <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+        <li>
+          <a href="#hello_world" class="nav-link">Hello World</a>
+        </li>
+        <li>
+          <a href="#variables" class="nav-link">Variables</a>
+        </li>
+        <li>
+          <a href="#declaring_variables" class="nav-link"
+            >Declaring Variables</a
+          >
+        </li>
+        <li>
+          <a href="#scope" class="nav-link">Scope</a>
+        </li>
+        <li>
+          <a href="#global_variables" class="nav-link">Global Variables</a>
+        </li>
+        <li>
+          <a href="#data_types" class="nav-link">Data Types</a>
+        </li>
+        <li>
+          <a href="#while_statement" class="nav-link">while Statement</a>
+        </li>
+        <li>
+          <a href="#reference" class="nav-link">Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Python is a popular programming language. It was created by Guido
+            van Rossum, and released in 1991.
+          </p>
+
+          <p>It is used for:</p>
+          <ul>
+            <li>web development (server side),</li>
+            <li>software development,</li>
+            <li>mathematics,</li>
+            <li>system scripting.</li>
+          </ul>
+          <section>
+            <header>Why Python?</header>
+            <ul>
+              <li>
+                Python works on different platforms (Windows, Mac, Linux,
+                Raspberry Pi, etc).
+              </li>
+              <li>
+                Python has a simple syntax similar to the English language.
+              </li>
+              <li>
+                Python has syntax that allows developers to write programs with
+                fewer lines than some other programming languages.
+              </li>
+              <li>
+                Python runs on an interpreter system, meaning that code can be
+                executed as soon as it is written. This means that prototyping
+                can be very quick.
+              </li>
+              <li>
+                Python can be treated in a procedural way, an object-oriented
+                way or a functional way.
+              </li>
+            </ul>
+          </section>
+        </article>
+      </section>
+
+      <section class="main-section" id="hello_world">
+        <header>Hello World</header>
+        <article>
+          <p>
+            First thing first, make sure you have installed Python on your
+            machine. If you haven't visit this
+            <a
+              href="https://www.w3schools.com/python/python_getstarted.asp"
+              target="_blank"
+              >website</a
+            >
+            and follow the instructions.
+          </p>
+          <p>
+            In your code editor type:
+            <code>print(Hello, World!)</code>
+          </p>
+          <p>Press Ctrl+R and it should gives an output of "Hello, World"</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="variables">
+        <header>Variables</header>
+        <article>
+          <p>Variables are containers for storing data values.</p>
+          <p>
+            Python has no command for declaring a variable. A variable is
+            created the moment you first assign a value to it.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="declaring_variables">
+        <header>Declaring Variables</header>
+        <article>
+          <p>
+            Variables do not need to be declared with any particular type, and
+            can even change <em>type</em> after they have been set.
+          </p>
+          <p>
+            Try to type this code and see what you got!
+            <code>x = 5 y = "John" print(x) print(y)</code>
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="scope">
+        <header>Scope</header>
+        <article>
+          <p>
+            A variable is only available from inside the region it is created.
+            This is called <strong>scope</strong>.
+          </p>
+          <p>Type of scope:</p>
+          <ul>
+            <details>
+              <summary>Local Scope</summary>
+              <p>
+                A variable created inside a function belongs to the local scope
+                of that function, and can only be used inside that function.
+              </p>
+              <p>
+                Try out this code:
+                <code>def myfunc(): x = 300 print(x) myfunc()</code>
+              </p>
+              <p>Another example, a function inside function</p>
+              <p>
+                As explained in the example above, the variable x is not
+                available outside the function, but it is available for any
+                function inside the function:
+              </p>
+              <code>
+                def myfunc(): x = 300 def myinnerfunc(): print(x) myinnerfunc()
+                myfunc()
+              </code>
+            </details>
+            <details>
+              <summary>Global Scope</summary>
+              <p>
+                A variable created in the main body of the Python code is a
+                global variable and belongs to the global scope. <br />Global
+                variables are available from within any scope, global and local.
+              </p>
+              <p>Try this out:</p>
+              <p>
+                A variable created outside of a function is global and can be
+                used by anyone:
+              </p>
+              <code>x = 300 def myfunc(): print(x) myfunc() print(x) </code>
+            </details>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="global_variables">
+        <header>Global Variables</header>
+        <article>
+          <p>
+            Variables that are created outside of a function (as in all of the
+            examples above) are known as global variables. <br />Global
+            variables can be used by everyone, both inside of functions and
+            outside.
+          </p>
+          <p>For example:</p>
+          <code
+            >x = "awesome" def myfunc(): print("Python is " + x) myfunc()
+          </code>
+          <p>
+            Created a variable outside of a function, and use it inside the
+            function
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="data_types">
+        <header>Data Types</header>
+        <article>
+          <p>
+            In programming, data type is an important concept. <br />
+
+            Variables can store data of different types, and different types can
+            do different things. <br />
+
+            Python has the following data types built-in by default, in these
+            categories:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Element</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Text</td>
+                <td>str</td>
+              </tr>
+              <tr>
+                <td>Numeric</td>
+                <td>int, float, complex</td>
+              </tr>
+              <tr>
+                <td>Sequence</td>
+                <td>list, tuple, range</td>
+              </tr>
+              <tr>
+                <td>Mapping</td>
+                <td>dict</td>
+              </tr>
+              <tr>
+                <td>Set</td>
+                <td>set, frozenset</td>
+              </tr>
+              <tr>
+                <td>Boolean</td>
+                <td>bool</td>
+              </tr>
+              <tr>
+                <td>Binary</td>
+                <td>bytes, bytearray, memoryview</td>
+              </tr>
+              <tr>
+                <td>None</td>
+                <td>NoneType</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="main-section" id="while_statement">
+        <header>While Statement</header>
+        <article>
+          <p>Python has two primitive loop commands:</p>
+          <ul>
+            <li>while loops</li>
+            <li>
+              <a
+                href="https://www.w3schools.com/python/python_for_loops.asp"
+                target="_blank"
+                >for</a
+              >
+              loops
+            </li>
+          </ul>
+          <p>
+            With the while loop we can execute a set of statements as long as a
+            condition is true. <br />
+            For example,
+          </p>
+          <code>i = 1 while i < 6: print(i) i += 1</code>
+          <p>Try to see what happens!</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://www.w3schools.com/python/default.asp"
+                target="_blank"
+                >W3School</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
